@@ -18,7 +18,7 @@ public class Test {
 			init.wipe();
 			init.initAll();
 			pop.populateTitles();
-			//pop.populateRegTypes();
+			pop.populateRegTypes();
 			pop.populateStudents(30);
 			pop.populateLecturers(30);
 			pop.populateRealData();

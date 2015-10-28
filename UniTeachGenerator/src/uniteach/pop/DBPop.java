@@ -170,6 +170,9 @@ public class DBPop {
 		 					 "VALUES(4,4,'Jack','Sparrow','1990-05-20');";
 		String popStudent5 = "INSERT INTO STUDENT " + 
 							 "VALUES(5,3,'Sally','Sparrow','1993-12-25');";
+		String popStuReg = "INSERT INTO StudentRegistration VALUES(1,2,2)";
+		String popStuCon = "INSERT INTO StudentContact VALUES (1,'son@deathstar.org','A galaxy far far away')";
+		String popNOKCon = "INSERT INTO NextOfKinContact VALUES (1,'Darth Vader','father@deathstar.org','A galaxy far far away')";
 		try {
 			stmt = dbConn.prepareStatement(popLecturer);
 			boolean n = stmt.execute();
@@ -182,6 +185,12 @@ public class DBPop {
 			stmt = dbConn.prepareStatement(popStudent4);
 			n = stmt.execute();
 			stmt = dbConn.prepareStatement(popStudent5);
+			n = stmt.execute();
+			stmt = dbConn.prepareStatement(popStuReg);
+			n = stmt.execute();
+			stmt = dbConn.prepareStatement(popStuCon);
+			n = stmt.execute();
+			stmt = dbConn.prepareStatement(popNOKCon);
 			n = stmt.execute();
 			for (int i=1;i<6;i++) {
 				String popTutor = "INSERT INTO Tutor " +
