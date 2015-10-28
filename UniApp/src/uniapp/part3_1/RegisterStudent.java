@@ -66,6 +66,7 @@ public class RegisterStudent {
 		}
 		if (!Helper.checkDate(dateVar)) {
 			System.out.println("Sorry, the date is not a valid date. Please start the program again.");
+			System.exit(0);
 		}
 		
 		Database db = new Database();
@@ -73,9 +74,9 @@ public class RegisterStudent {
 			db.getConn().connect();
 			if (checkExisting(title, forename, familyName, dateVar,db)) {
 				System.out.println("Sorry, there already exists a student with those details");
+				System.exit(0);
 			}
 			else {
-				System.out.println("Good, this works.");
 				register(title, forename, familyName, dateVar, db);
 			}
 		}
