@@ -56,4 +56,13 @@ public class Helper {
 		else if (title.equals("DOC")) return 5;
 		else return 0;
 	}
+	
+	public static String convertTitle(int id) {
+		if (id == 1) return "MR";
+		if (id == 2) return "MS";
+		if (id == 3) return "MRS";
+		if (id == 4) return "CAPT";
+		if (id == 5) return "DOC";
+		else return "UNDEFINED";
+	}
 }

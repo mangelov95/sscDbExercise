@@ -170,9 +170,14 @@ public class DBPop {
 		 					 "VALUES(4,4,'Jack','Sparrow','1990-05-20');";
 		String popStudent5 = "INSERT INTO STUDENT " + 
 							 "VALUES(5,3,'Sally','Sparrow','1993-12-25');";
-		String popStuReg = "INSERT INTO StudentRegistration VALUES(1,2,2)";
-		String popStuCon = "INSERT INTO StudentContact VALUES (1,'son@deathstar.org','A galaxy far far away')";
-		String popNOKCon = "INSERT INTO NextOfKinContact VALUES (1,'Darth Vader','father@deathstar.org','A galaxy far far away')";
+		String popStuReg = "INSERT INTO StudentRegistration VALUES(1,2,2);";
+		String popStuCon = "INSERT INTO StudentContact VALUES (1,'son@deathstar.org','A galaxy far far away');";
+		String popNOKCon = "INSERT INTO NextOfKinContact VALUES (1,'Darth Vader','father@deathstar.org','A galaxy far far away');";
+		String popStuReg1 = "INSERT INTO StudentRegistration VALUES(2,3,1);";
+		String popStuCon1 = "INSERT INTO StudentContact VALUES (2,'some@thing.com', 'Somewhere near');";
+		String popNOKCon1 = "INSERT INTO NextOfKinContact VALUES (2,'Somebodys Mom','mom@gmom.com','Home sweet home');";
+		
+		
 		try {
 			stmt = dbConn.prepareStatement(popLecturer);
 			boolean n = stmt.execute();
@@ -191,6 +196,12 @@ public class DBPop {
 			stmt = dbConn.prepareStatement(popStuCon);
 			n = stmt.execute();
 			stmt = dbConn.prepareStatement(popNOKCon);
+			n = stmt.execute();
+			stmt = dbConn.prepareStatement(popStuReg1);
+			n = stmt.execute();
+			stmt = dbConn.prepareStatement(popStuCon1);
+			n = stmt.execute();
+			stmt = dbConn.prepareStatement(popNOKCon1);
 			n = stmt.execute();
 			for (int i=1;i<6;i++) {
 				String popTutor = "INSERT INTO Tutor " +
